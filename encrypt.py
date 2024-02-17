@@ -1,6 +1,7 @@
 import tkinter
+
 def encryptRailFence(text, key):
-    gui.Window(title="Hello World",layout=[[]], margins=(100, 100)).read()
+    #gui.Window(title="Hello World",layout=[[]], margins=(100, 100)).read()
     text = list(''.join([char for char in text if char != ' ']))
     rail = [['' for i in range(len(text))] for j in range(key)]
 
@@ -9,8 +10,8 @@ def encryptRailFence(text, key):
      
     for i in range(len(text)):
         if (row == 0) or (row == key - 1):
+            print(rail)
             dir_down = not dir_down
-         
         rail[row][col] = text[i]
         col += 1
         if dir_down:
@@ -29,4 +30,4 @@ def decryptRailFence(text,key):
 
     return
 # Time complexity: O(N^2)
-encryptRailFence('Hello fgdgbgd', 5)
+encryptRailFence('Hello there friend', 3)
