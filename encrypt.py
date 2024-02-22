@@ -4,6 +4,7 @@ def encryptRailFence(text, key):
     
     # Create a matrix (rail fence) with 'key' number of rows and length of text columns
     rail = [['' for i in range(len(text))] for j in range(key)]
+    print(text)
 
     # Initialize direction (downward) and starting position (first row, first column)
     dir_down = False
@@ -28,6 +29,15 @@ def encryptRailFence(text, key):
     for j in range(key):
         for x in rail[j]:
             string1 += '' + x
+<<<<<<< HEAD
     
     # Return the final encrypted string
     return (string1)
+=======
+                 
+    return(string1)
+
+
+print(encryptRailFence("hello tehre friend", 2))
+
+>>>>>>> 308e5b6 (Rail fence cipher finished)
