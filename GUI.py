@@ -46,7 +46,7 @@ encrypt_button.grid(row=2, column=1, padx=(0, 100), pady=(20, 0))
 
 output = tk.Text(root, height=1, width=20, font=("Comic-sans", 20))
 output.grid(row=4, column=0)
-output.insert(1.0, print(key_text))
+output.insert(1.0, )
 root.geometry("800x500")
 root.title("Rail Fence Decryption and Encryption")
 
