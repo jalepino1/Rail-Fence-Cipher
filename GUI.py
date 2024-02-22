@@ -6,25 +6,25 @@ import tkinter as tk
 
 root = tk.Tk()
 
+
+
+
 def get_text_encrypt():
     inp = input_text.get(1.0, "end-1c") 
     key = key_text.get(1.0, "end-1c")
     print(inp,"encrypt")
     print(key)
     encrypted = encryptRailFence(str(inp),int(key))
-    text = tk.Text(root, height=8)
-    text.grid(row=4, column=0)
-    text.insert('1.0', text = encrypted)
+    return(encrypted)
 
 def get_text_decrypt():
     inp = input_text.get(1.0, "end-1c") 
     key = key_text.get(1.0, "end-1c")
     print(inp,"decrypt")
     print(key)
-    decrypt1 = decrypt(str(inp),int(key))
-    return(decrypt1)
+    decrypt(str(inp),int(key))
     
-           
+               
 
 
 input_text = tk.Text(root,height=4, width=50, font=('Comic-sans', 20))
@@ -44,14 +44,11 @@ encrypt_button = tk.Button(root, text="Encrypt", command=get_text_encrypt, width
 encrypt_button.grid(row=2, column=1, padx=(0, 100), pady=(20, 0))
 
 
-output = tk.Text(root, height=2, width=20, font=("Comic-sans", 20))
+output = tk.Text(root, height=1, width=20, font=("Comic-sans", 20))
 output.grid(row=4, column=0)
-#this = get_text_encrypt()
-#output.insert(1.0, this)
+output.insert(1.0, print(key_text))
 root.geometry("800x500")
 root.title("Rail Fence Decryption and Encryption")
-
-
 
 
 

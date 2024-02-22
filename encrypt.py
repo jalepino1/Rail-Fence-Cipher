@@ -1,5 +1,4 @@
 
-
 def encryptRailFence(text, key):
     text = list(''.join([char for char in text if char != ' ']))
     rail = [['' for i in range(len(text))] for j in range(key)]
@@ -9,8 +8,8 @@ def encryptRailFence(text, key):
      
     for i in range(len(text)):
         if (row == 0) or (row == key - 1):
-            print(rail)
             dir_down = not dir_down
+         
         rail[row][col] = text[i]
         col += 1
         if dir_down:

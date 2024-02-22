@@ -26,6 +26,7 @@ def decrypt(text, key):
             if ((rail[i][j] == '*') and (index < len(text))):
                 rail[i][j] = text[index]
                 index += 1
+    print("\n",rail,"HEERE")
     string1 = []
     row, col = 0, 0
     for i in range(len(text)):
