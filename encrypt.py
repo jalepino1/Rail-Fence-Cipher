@@ -21,5 +21,5 @@ def encryptRailFence(text, key):
         for x in rail[j]:
             string1 += '' + x
                  
-    return(print("Encrypted message:\n",string1))
+    return(string1)
 

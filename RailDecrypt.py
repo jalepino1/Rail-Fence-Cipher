@@ -46,4 +46,4 @@ def decrypt(text, key):
             row -= 1
 
                  
-    return(print("Decrypted message:\n",string1))
+    return(string1)
